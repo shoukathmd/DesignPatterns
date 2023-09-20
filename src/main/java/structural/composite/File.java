@@ -1,6 +1,4 @@
-package composite;
-
-import java.util.Random;
+package structural.composite;
 
 public class File implements FileSystemEntity{
 

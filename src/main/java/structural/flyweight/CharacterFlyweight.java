@@ -1,4 +1,4 @@
-package flyweight;
+package structural.flyweight;
 
 public interface CharacterFlyweight {
     // x, y are extrinsic states representing position.

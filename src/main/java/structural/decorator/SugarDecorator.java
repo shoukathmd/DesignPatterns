@@ -1,4 +1,4 @@
-package decorator;
+package structural.decorator;
 
 public class SugarDecorator extends CoffeeDecorator{
    // protected  Coffee coffee;

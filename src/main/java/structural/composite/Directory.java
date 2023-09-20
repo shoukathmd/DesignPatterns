@@ -1,4 +1,4 @@
-package composite;
+package structural.composite;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
