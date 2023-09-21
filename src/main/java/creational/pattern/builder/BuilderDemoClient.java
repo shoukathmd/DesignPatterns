@@ -1,8 +1,6 @@
 package creational.pattern.builder;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class BuilderDemoClient {
@@ -17,18 +15,24 @@ public class BuilderDemoClient {
 
         List<Person> personList = new ArrayList<>();
         personList.addAll(Arrays.asList(p1, p2, p3, p4));
-        System.out.println(personList);
-        personList.sort((o1, o2) -> o2.getAge() - o1.getAge());
-        System.out.println(personList);
+//        System.out.println(personList);
+//        personList.sort((o1, o2) -> o2.getAge() - o1.getAge());
+//        System.out.println(personList);
+//
+//        personList.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
+//
+//        System.out.println(personList);
+//
+//        personList.sort((o1, o2) -> o2.getName().compareTo(o1.getName()));
+//
+//        System.out.println(personList);
 
-        personList.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
+//        personList.sort(Comparator.comparing(Person :: getAge).reversed().thenComparing(Person :: getName));
+//        System.out.println(personList);
 
-        System.out.println(personList);
-
-        personList.sort((o1, o2) -> o2.getName().compareTo(o1.getName()));
-
-        System.out.println(personList);
         //personList.stream().map(SerializationUtils::clone).collect(Collectors.toList());
+        Collections.sort(personList);
+        System.out.println(personList);
 
     }
 }

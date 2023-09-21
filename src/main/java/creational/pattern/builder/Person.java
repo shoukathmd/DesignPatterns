@@ -1,7 +1,7 @@
 package creational.pattern.builder;
 
 
-public class Person {
+public class Person implements Comparable<Person>{
 
     private String name;
     private Integer age;
@@ -33,5 +33,10 @@ public class Person {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return Integer.compare(o.getAge(), this.age);
     }
 }
