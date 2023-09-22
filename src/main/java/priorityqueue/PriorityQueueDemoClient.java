@@ -1,9 +1,6 @@
 package priorityqueue;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class PriorityQueueDemoClient {
 
@@ -39,7 +36,7 @@ public class PriorityQueueDemoClient {
         priorityQueue_1.add(t2);
         priorityQueue_1.add(t3);
         priorityQueue_1.add(t4);
-
+        Deque<Integer> dequeu = new ArrayDeque<>();
         while (priorityQueue_1.size() > 0) {
             System.out.println(priorityQueue_1.poll());
         }
