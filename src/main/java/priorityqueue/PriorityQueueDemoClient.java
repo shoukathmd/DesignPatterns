@@ -24,12 +24,14 @@ public class PriorityQueueDemoClient {
             System.out.println(priorityQueue.poll());
         }
 
-        Comparator<Task> comparator = new Comparator<Task>() {
-            @Override
-            public int compare(Task o1, Task o2) {
-                return Integer.compare(o1.getPriority(), o2.getPriority());
-            }
-        };
+//        Comparator<Task> comparator = new Comparator<Task>() {
+//            @Override
+//            public int compare(Task o1, Task o2) {
+//                return Integer.compare(o1.getPriority(), o2.getPriority());
+//            }
+//        };
+
+        Comparator<Task> comparator = Comparator.comparing(Task::getPriority);
         PriorityQueue<Task> priorityQueue_1 = new PriorityQueue<>(comparator);
 
         priorityQueue_1.add(t1);

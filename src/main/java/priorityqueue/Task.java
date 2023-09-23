@@ -13,14 +13,6 @@ public class Task implements Comparable<Task>{
         return priority;
     }
 
-    @Override
-    public String toString() {
-        return "Task{" +
-                "name='" + name + '\'' +
-                ", priority=" + priority +
-                '}';
-    }
-
     public Task(String name, Integer priority) {
         this.priority = priority;
         this.name = name;
@@ -28,5 +20,13 @@ public class Task implements Comparable<Task>{
 
     public int compareTo(Task o) {
         return this.name.compareTo(o.name);
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "name='" + name + '\'' +
+                ", priority=" + priority +
+                '}';
     }
 }
